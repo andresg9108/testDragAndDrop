@@ -1,0 +1,10 @@
+{
+  "name": "testdraganddrop",
+  "version": "0.1.0",
+  "description": "",
+  "author": "Andrés González",
+  "license": "MIT",
+  "dependencies": {
+    "sortablejs": "^1.15.2"
+  }
+}

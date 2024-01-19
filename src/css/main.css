@@ -1,0 +1,51 @@
+body{
+	color: #fff;
+	background-color: #000;
+	margin: 0;
+}
+
+.container-horizontal, .container-vertical{
+	display: flex;
+
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+
+	color: white;
+	background-color: gray;
+	margin: 50px;
+	padding: 5px;
+}
+
+.container-horizontal{
+	flex-direction: row;
+}
+
+.container-vertical{
+	flex-direction: column;
+}
+
+.item{
+	flex: 1;
+	width: calc(100% - 30px);
+	
+	padding: 10px;
+	margin: 5px;
+	color: white;
+	background-color: red;
+	cursor: move;
+}
+
+.item-selected{
+	background-color: green;
+	box-shadow: 0px 0px 20px rgba(149, 153, 159, .16);
+}
+
+.item-ghost{
+	border: 2px dotted #000;
+}
+
+.item-drag{
+	background-color: #000;
+}
