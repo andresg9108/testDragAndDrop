@@ -1,16 +1,10 @@
-const oList1 = document.getElementById('list1');
-const oList2 = document.getElementById('list2');
+const oListById1 = document.getElementById('list1');
+const oListById2 = document.getElementById('list2');
 const oGeneralConfiguration = {
 	animation: 150, 
 	chosenClass: 'item-selected', 
 	ghostClass: 'item-ghost', 
 	dragClass: 'item-drag', 
-	onEnd: (event) => {
-		console.log('END');
-
-		// event.to.classList.add('highlighted-group');
-		// event.from.classList.remove('highlighted-group');
-	},
 	/*
 	store: {
 		get: (sortable) => {
@@ -27,7 +21,7 @@ const oGeneralConfiguration = {
 	*/
 }
 
-Sortable.create(oList1, {
+const oList1 = new Sortable(oListById1, {
 	...oGeneralConfiguration, 
 	group: {
         name: 'my-sortable', 
@@ -38,12 +32,20 @@ Sortable.create(oList1, {
     // filter: '.filtered', 
     // sort: false 
 });
-
-Sortable.create(oList2, {
+const oList2 = new Sortable(oListById2, {
 	...oGeneralConfiguration, 
 	group: 'my-sortable' 
 });
 
+oList1.options.onEnd = (event) => {
+	console.log('END');
+
+	// event.to.classList.add('highlighted-group');
+	// event.from.classList.remove('highlighted-group');
+}
+oList2.options.onEnd = (event) => {
+	console.log('END');
+}
 /*
 EVENTOS:
 
