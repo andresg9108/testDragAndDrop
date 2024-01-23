@@ -38,12 +38,14 @@ const oList2 = new Sortable(oListById2, {
 });
 
 oList1.options.onEnd = (event) => {
+	console.log(event.item);
 	console.log('END');
 
 	// event.to.classList.add('highlighted-group');
 	// event.from.classList.remove('highlighted-group');
 }
 oList2.options.onEnd = (event) => {
+	console.log(event.item);
 	console.log('END');
 }
 /*
@@ -58,4 +60,5 @@ EVENTOS:
 7- onRemove - Se dispara cuando un elemento se elimina de un grupo.
 8- onFilter - Se dispara cuando se intenta arrastrar un elemento, pero se filtra mediante una función de filtro.
 9- onClone - Se dispara cuando se clona un elemento durante un arrastre.
+10- onMove - Se dispara en el momento que estás a punto de soltar un elemento.
 */
